@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Queen ParrotFish</title>
+    <link rel="stylesheet" href="style1.css">
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Your CSS styles */
+        .image-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity */
+            z-index: 999;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 5%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff; /* Adjust close button color */
+            cursor: pointer;
+        }
+        <style>
+            .slideshow-container {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                padding-top: 50px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            .slideshow-content {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .slideshow-image {
+                display: none;
+                max-width: 80%;
+                max-height: 80%;
+                margin: 0 auto;
+            }
+            .slideshow-image.active {
+                display: block;
+            }
+            .slideshow-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="slideshow-container">
+            <span class="slideshow-close">&times;</span>
+            <div class="slideshow-content">
+                <img class="slideshow-image active" src="bg image.jpg" alt="parrotfish">
+                <img class="slideshow-image" src="adult parrotfish.jpg" alt="Image 1">
+                <img class="slideshow-image" src="old fish.jpeg" alt="Image 2">
+                <img class="slideshow-image" src="beak.jpg" alt="Beak of parrotfish">
+                <img class="slideshow-image" src="mucus.jpg" alt="mucus">
+                <img class="slideshow-image" src="habitat 1.jpg" alt="parrotfish">
+                <img class="slideshow-image" src="habi3.jpg" alt="parrotfish">
+            </div>
+        </div>
+        <!-- Rest of your HTML code -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // Keep navigation bar fixed
+                $(window).scroll(function(){
+                    if ($(window).scrollTop() >= 30) {
+                        $('body').addClass('fixed-nav');
+                    }
+                    else {
+                        $('body').removeClass('fixed-nav');
+                    }
+                });
+
+                // Show slideshow
+                $('.expanding-image').click(function(){
+                    $('.slideshow-container').fadeIn();
+                });
+
+                // Close slideshow
+                $('.slideshow-close').click(function(){
+                    $('.slideshow-container').fadeOut();
+                });
+
+                // Cycle through slideshow images
+                var currentImageIndex = 0;
+                var totalImages = $('.slideshow-image').length;
+                function showNextImage() {
+                    $('.slideshow-image').removeClass('active');
+                    $('.slideshow-image').eq(currentImageIndex).addClass('active');
+                    currentImageIndex = (currentImageIndex + 1) % totalImages;
+                }
+                setInterval(showNextImage, 3000); // Change image every 3 seconds
+            });
+        </script>
+    </style>
+</head>
+<body class="body">
+    <div class="logo-container">
+        <img src="attachment_48804949.jpeg" height="100px" width="100px" class="expanding-logo">
+    </div>
+    <div class="home">
+        <ol type="1"> 
+            <li><a href="Assignment_1.html">Home</a></li>
+            <li><a href="Conservation.html">Conservation</a></li>
+            <li><a href="aboutReproduction.html.html">Reproduction</a></li>
+            <li><a href="Honesty.html">Refrences</a></li>
+            <li><a href="Contact_us Assignment2/Contact_us.html">Contact Us</a></li>
+        </ol>
+    </div>
+    <figure class="image-container">
+        <!-- This container will hold the expanded image or video -->
+    </figure>
+    <figure class="image-container">
+        <img src="bg image.jpg" alt="parrotfish" class="expanding-image">
+        <figcaption>
+            <b>Meet the Fabulous Queen ParrotFish</b>
+        </figcaption>
+    </figure>
+    <hr> 
+    <br><b>Also Known as</b> Blownose, Blue Chub, Blue Parrot, Blueman, jobblin Crow, Moontail, parrot, Slimy head.
+    <hr> 
+    <h2>Taxonomic separation of Queen parrotfish:</h2>
+    <table class="T2">
+        <tr>
+            <td>KINGDOM</td>
+            <td>Animalia</td>
+        </tr>
+        <tr>
+            <td>PHYLUM</td>
+            <td>Chordata</td>
+        </tr>
+        <tr>
+            <td>CLASS</td>
+            <td>Actinopterygii</td>
+        </tr>
+        <tr>
+            <td>ORDER</td>
+            <td>Labriformes</td>
+        </tr>
+        <tr>
+            <td>FAMILY</td>
+            <td>Scaridae</td>
+        </tr>
+        <tr>
+            <td>GENUS</td>
+            <td>Scarus</td>
+        </tr>
+        <tr>
+            <td>SPECIES</td>
+            <td>Scarus vetula</td>
+        </tr>
+    </table>
+    <hr> 
+    <h2>Table of Content:</h2><br>
+    <nav>
+        <ul class="vertical-list" ><br>
+            <li class="v1"><a href="#Introduction">Introduction</a></li>
+            <li class="v2"><a href="#Appearance">Appearance</a></li>
+            <li class="v3"><a href="#Habitat">Habitat</a></li>
+            <li class="v4"><a href="#behaviour">Behaviour</a></li>
+            <li class="v5"><a href="#video">Learn Life Cycle of parrotfish with one video</a></li>
+        </ul>
+    </nav>
+    <br>
+    <figure>
+        <img src="01509345.jpg" alt="parrotfish" width="600" style="padding-top:10%;">
+        <figcaption>
+            (Douwma, n.d.)
+        </figcaption>
+    </figure>
+    <div class="Introduction" id="Introduction" style="float: left;">
+        <h2>Introduction:</h2>
+        <p>
+            Queen parrotfish is a family member of oceanic ray-finned fish, a parrotfish in the family Scaridae. It is famous for its vibrant colors, its appearance and for its crucial ecological impact with coral reef ecosystems.
+            We can found this at the ridge of tropical West Atlantic ocean and the Caribbean Sea and at Gulf of Mexico. this fish has numerous names which I have listed below the heading such as, blue chub, blueman, moontail, and etc. Adult males and females Queen Parrotfish, they are reddish-brown in color, their color is totally different from their old or we can say their final stage of life's color. In their final stage they obtain bluish-green color. this species is common in the ocean because of its range.
+        </p>
+    </div>
+    <p>You can listen audio of the parrot fish as well click to play</p>
+    <audio controls>
+        <source src="audio parrotfish.mp3" type="audio/mpeg">
+    </audio>
+    <hr>
+    <b><h2 class="Appearance" id="Appearance">Appearance:</b></h2>  <br>
+    <ol type="1">
+        <li> This Fish is being an attracted because of its diverse colors, we can found from green, blue, yellow, pink, violet,and purple shades of parrotfishes.</li><br>
+        <li>They are having a special extended shape of body, brutal head and a strong mouth in the shape of beak to scratch algae and coral from the beneath sea. </li><br>
+        <li>They are changing color in their whole life span when they are young they have a different color as they are becoming old their color change with the age.</li><br>
+        <li>If we talk about size alike the color their sazy vary fish to fish their are some parrot fishes, they have length of around 12 to 20 inches and few are grow larges and there are few which are shorten it depends on their surroundings that in which environment they are living.</li><br>
+        <li>In addition, the Queen parrotfishes make and display different patterns on their body which serves many purposes such as it helps for recognition and mate attraction</li><br>
+    </ol>
+    <figure>
+        <div class="container">
+            <img src="adult parrotfish.jpg" alt="Image 1" width="500">
+            <figcaption style="text-align: end;">Adult fish </figcaption>
+            <img src="old fish.jpeg" alt="Image 2" width="500" >
+            <figcaption style="text-align: end;">Old fish </figcaption>
+        </div>
+    </figure>
+    <figure>
+        <img src="beak.jpg"      alt="Beak of parrotfish" width="500">
+        <figcaption>
+            (Bryant, n.d.)
+        </figcaption>
+    </figure>
+    <h2 class="Habitat" id="Habitat" Style="float: left;"><br>Habitat:</h2>
+    <ul>
+        <li><u>Coral Reef ecosystems:</u><br>
+            These fishes are mainly found at the bottom of the ocean where sea corals are present and also algae and many species of marine life. These reefs and species give shelter and appetite to the parrotfish. It also helps to balance the ecosystems because they are also the part of the food chain.
+        </li> <br>
+        <li><u>Warm, Tropical Waters:</u> <br>
+            We can found parrotfish mainly in inhabit warm, tropical waters which are found in the Western AtlanticOcean, as well in Caribbean Sea, the Gulf of Mexico, and in other nearby areas.</li><br>
+        <li><u>Shallow and Clear Waters:</u><br>
+            They are present in the reef corals where water is clear where algae and corals can get the sunlight and support to photosynthesis.
+            these conditions will help them to grow and with the help of that these species and reef coral can make excess food source for the ParrotFish.</li><br>
+        <li><u> Coral and algal Growth:</u><br>
+            Queen parrotfish are in the areas where they can find abundant coral and algae growth, as their main survival source is algae and coral. Healthy coral reefs and algae provide them ample food.</li><br>
+        <li><u>Seagrass Beds and Rocky Areas:</u><br>
+            As we know now that coral and algae is their main habitat, they are also found on the areas where they can get adjacent habitat from the seagrass and Rocky areas, mostly during their different life stages they change their habitat and places where they used to live and also to save themselves from the predators.
+            <hr></li></ul><br>
+    <div class="container">
+        <figure>
+            <img src="mucus.jpg"     alt="mucus" width="500">
+            <img src="habitat 1.jpg" alt="parrotfish" width="500">
+        </figure>
+    </div>
+    <figure>
+        <img src="habi3.jpg" alt="parrotfish" width="500">
+    </figure><br>
+
+    <h2>Population of Queen Parrotfish</h2><br>
+    <table class="T2" >
+        <tr>
+            <th>Year</th>
+            <th>Population Estimate</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>650,124</td>
+            <td>considered by National Oceanic and Atmospheric Administration (NOAA)</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>500,000</td>
+            <td>Estimate based on research in the Caribbean region</td>
+        </tr>
+    </table>
+    <section>
+        <h2 class="behaviour" id="behaviour"    style="float: left;">Behaviour:</h2>
+        <ol type="1">
+            <li><u>Feeding Behaviour:</u><br> These fishes are herbivores because their main food source is algae, and other small animals that are found on the reef structure. as they have a beak and jaws that help them to take the algae and corals from the rocks. By eating the algae from the rocks and bottom of the oceans they control the growth of algae and it helps to maintain the ecological-balance.</li><br>
+            <li><u>Diurnal Activity:</u><br> Queen Parrotfish also do diurnal activities, which means they mainly eat food in the daylight because at that time they seem more active. They spend most of the time on foraging food from the reef, by using their keen senses to find the algae and other helpful food resources. </li><br>
+            <li><u>Grouping behaviour:</u><br>
+                These Queen parrotfishes are mainly observed in the groups or as lonely individuals. While locating corals and algae they mainly found alone and sometimes they make little aggregation with other species, extensively at the time to create generation. </li><br>
+            <li><u>Nocturnal Shelting:</u><br> At the time of night, Queen parrotfish look at the crevices, under ledges, or other protected areas around the reefs. During that time they used to produce mucus or we can say cocoons around their body to protect barrier against the predators and from the parasites while sleeping. </li><br>
+            <li><u> Reproductive Behavior:</u><br> In the process of reproduction, queen parrotfish involves large spawning aggregations, in that process individuals release the eggs and the sperm simultaneously. their spawning cycle contemporize with the lunar cycle. </li><br>
+            <li><u>Social Interactions:</u><br> As I have already explained in one of the above paragraphs these parrotfish species used to live in the group or sometimes alone they are making friends from the same species as they are, but sometimes they make friend from the other species which are cleaner fishes and make Interactions with cleaners. </li><br>
+
+        </ol>
+    </section>
+    <div class="video-container">
+        <h2 class="video" id="video">Learn Life Cycle of parrotfish with one video </h2>
+        <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/l7cU_9Fwf-Y?autoplay=1&mute=1">
+        </iframe>
+    </div>
+    <footer>
+        <div class="contact-info">
+            <h2 class="ch2">If you want more information related to this species <br>**Feel free to reach us**</h2><br>
+            <h3 class="ch3">Contact Information</h3><br>
+            <p>Email:<a href="Muskan.Muskan12@triosstudent.com">Muskan.Muskan12@triosstudent.com</a> or<a href="Sukhveer.Sukhveer123@triosstudent.com">Sukhveer.Sukhveer123@triosstudent.com</a> </p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Main Street, Bramton, Canada</p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            // Keep navigation bar fixed
+            $(window).scroll(function(){
+                if ($(window).scrollTop() >= 30) {
+                    $('body').addClass('fixed-nav');
+                }
+                else {
+                    $('body').removeClass('fixed-nav');
+                }
+            });
+
+            // Gallery slideshow
+            $('.expanding-image').click(function(){
+                var $this = $(this);
+                var $imageContainer = $this.closest('.image-container');
+                var $nextImage = $imageContainer.next('.image-container');
+                var $images = $imageContainer.find('img');
+                var index = $images.index($this);
+                
+                $imageContainer.fadeOut(300, function(){
+                    if ($nextImage.length > 0) {
+                        $nextImage.fadeIn(300);
+                    } else {
+                        $images.first().fadeIn(300);
+                    }
+                });
+            });
+
+            // Close button for slideshow
+            $('.image-container').append('<span class="close-button">&#10006;</span>');
+            $('.close-button').click(function(){
+                $(this).closest('.image-container').fadeOut(300);
+            });
+            
+            // Close slideshow by clicking outside of it
+            $(document).mouseup(function(e) {
+                var container = $('.image-container');
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.fadeOut(300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

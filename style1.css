@@ -1,0 +1,134 @@
+table,tr,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    width: 40%;
+    padding: 10px 10px 10px 10px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    display: flex;
+    padding-right: 5%;
+    
+}
+.container img {
+  margin: 0 20px; /* Adjust as needed */
+}
+
+  
+  .overlay-text {
+    position: absolute;
+    top: 90%; 
+    left: 33%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 40px; 
+    text-align: bottom;
+    font-family: sans-serif;
+}
+li,ol,ul{
+  display: inline;
+  padding: 5px;
+padding: top 2px; ;
+  float: left;
+}
+
+.logo{
+  text-align: right;
+  height: 100px;
+  width: 100px;
+}
+h2{
+  float:  left;
+}
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ch2,ch3{
+   text-align: center;padding: 20px;background-color:rgba(17, 22, 75, 0.885);color: white; 
+
+}
+.vertical-list,v1,v2,v3,v4,v5{
+  display: grid;
+
+}
+.t2{
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+}
+.image-container {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+}
+
+.expanding-image {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .expanding-image {
+  transform: scale(1.1);
+}
+
+.image-container figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+}
+
+.image-container:hover figcaption {
+  transform: translateY(0);
+}
+.logo-container {
+  position: relative;
+  overflow: hidden;
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+}
+
+.expanding-logo {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.logo-container:hover .expanding-logo {
+  transform: scale(1.1);
+}
+.T2 {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Apply transition to background color and text color */
+}
+
+.T2:hover {
+  background-color: lightblue; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
